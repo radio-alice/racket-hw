@@ -1,0 +1,39 @@
+;; === correctness ===
+ 
+lookup           8 / 8
+
+insert           8 / 8
+
+keys-inorder     8 / 8
+
+pairs-inorder    8 / 8
+
+leftmost         8 / 8
+
+remove-leftmost  8 / 8
+
+remove-root      8 / 8
+
+remove           8 / 8
+
+;; === style ===
+
+;; code layout                        
+;; identifiers are well named         
+;; program decomposition (helpers)    
+
+;; contracts (type ascriptions)       
+;; well-written purposes              
+;; adequate tests                     
+
+;; clarity (clear logic)
+
+;; -- to expedite evaluation, everyone gets 36 style points
+;;    unconditionally for lab 6
+
+;;                                36/ 36
+
+;; _total-score_                 100/ 100
+
+
+;; graded by Matthew Wachs

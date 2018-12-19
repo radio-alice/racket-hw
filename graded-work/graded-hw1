@@ -1,0 +1,38 @@
+
+;; === correctness ===
+
+;; - nm->km                          4/ 4
+;; - km->nm                          4/ 4
+;; - coins->cents                    4/ 4
+;; - eval-quad                       4/ 4
+;; - distance-fallen                 4/ 4
+;; - seconds-to-fall                 4/ 4
+
+;; - majority?                       2/ 2
+;; - liquid-water?                   1/ 3
+;; does not account for gas
+;; - above-quad?                     4/ 4
+
+;; - midpt-x                         2/ 2
+;; - midpt-y                         2/ 2
+
+;; - cars-needed                     8/ 8
+;; - cars-pairs                      6/ 6
+
+;; === style ===
+
+;; code layout                       8/ 8
+;; identifiers are well named        6/ 6
+;; program decomposition (helpers)   4/ 4
+
+;; contracts (type ascriptions)      8/ 8
+;; well-written purposes             6/ 6
+;; adequate tests                    6/ 6
+
+;; clarity (clear logic)             6/ 6
+
+;; svn used correctly                5/ 5
+
+;; _total-score_                  98/ 100
+
+;; graded by Matthew Wachs

@@ -1,0 +1,53 @@
+;; === correctness ===
+
+;; board=?                                     4 / 4
+;; board-copy                                  3 / 4
+;; Fails one of our test cases
+
+;; updated board-ref                           3 / 3
+;; board-set!                                  3 / 3
+;; updated drawing                             4 / 5
+;; Columns are labeled backwards
+;; updated put-stone-at                        1 / 2
+;; Fails one of our test cases
+
+;; legal-move?
+;; - valid board location                      2 / 2
+;; - intersection is empty                     2 / 2
+;; - history will not repeat                   3 / 3
+
+;; apply-move
+;; - stone is placed                           1 / 1
+;; - chain to be captured is identified        6 / 6
+;; - captured pieces are removed               0 / 3
+;; Taking these points off to account for pieces not actually being removed in play
+;; - self-capture                              0 / 3
+;; - history is recorded                       2 / 2
+
+;; play
+;; - clicks apply legal moves                  2 / 2
+;; - clicks gracefully reject illegal moves    2 / 2
+;; - passes work                               2 / 2
+;; - appropriate status messages               2 / 6
+;; Need to indicate what move/pass just happened, and if a user attempted and illegal move
+
+;; === style ===
+
+;; code layout                                 5 / 6
+;; Make sure none of your lines of code exceed 80 characters!
+;; identifiers are well named                  6 / 6
+;; program decomposition (helpers)             6 / 6
+;; code is not redundant                       6 /  6
+
+;; contracts (type ascriptions)                4 / 4
+;; well-written purposes                       5 / 5
+;; adequate tests                              2 / 5
+;; Many of your functions don't have tests
+
+;; clarity (clear logic)                       6 / 6
+
+;; svn used correctly                          1 / 1
+
+;; _total-score_                               83 / 100
+
+;; Graded by Jacob Spiegel

@@ -1,0 +1,52 @@
+;; === correctness ===
+
+;; GUI
+;; three timers
+;; - tick for specific player                 2 / 2
+;; - total for game                           2 / 2
+;; - formatting, 0:00.0                       3 / 3
+;; - stop when game over                      1 / 1
+;; hovering stone
+;; - general                                  2 / 2
+;; - appropriate color                        2 / 2
+;; - only for legal moves                     2 / 2
+;; - pass updates                             2 / 2
+;;   (appears or disappears with "p"
+;;    when legal for one color but
+;;    not the other, without mouse move)
+;; last move intersection                     2 / 2
+;; last move captures                         3 / 3
+;; last move self-captures                    2 / 2
+
+;; endgame
+;; two-passes?                                2 / 2
+;; finished game becomes inert                2 / 2
+;; outcome                                    8 / 8
+
+;; serialization
+;; saving game                                8 / 8
+;; loading game
+;; - general                                  8 / 8
+;; - consistency checks                       4 / 4
+
+;; deductions for issues not explicitly identified above:
+
+
+;; === style ===
+
+;; code layout                                6 / 6
+;; identifiers are well named                6 / 6
+;; program decomposition (helpers)            6 / 6
+;; code is redundant                          6 / 6
+
+;; contracts (type ascriptions)               4 / 4
+;; well-written purposes                      5 / 5
+;; adequate tests                             5 / 5
+
+;; clarity (clear logic)                      6 / 6
+
+;; svn used correctly                         1 / 1
+
+;; _total-score_                              100 / 100
+
+;; Graded by Pramod

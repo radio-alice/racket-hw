@@ -1,0 +1,82 @@
+#lang typed/racket
+(require typed/test-engine/racket-tests)
+(require "../include/cs151-core.rkt")
+
+;; bracket, others: return values for given bracket width, income
+(: bracket (Integer Integer -> Integer))
+(define (bracket i w)
+  (max (- i w) 0))
+(check-expect (bracket 100000 30000) 70000)
+
+(: a (Integer -> Integer))
+(define (a i)
+  (bracket i 30000))
+(check-expect (a 100000) 70000)
+
+(: b (Integer -> Integer))
+(define (b i)
+  (bracket (a i) 20000))
+(check-expect (b 100000) 50000)
+
+(: c (Integer -> Integer))
+(define (c i)
+  (bracket (b i) 30000))
+(check-expect (c 100000) 20000)
+
+;; marginal-tax: compute the amount of tax owed on the given income.
+(: marginal-tax (Integer -> Integer))
+(define (marginal-tax i)
+  (exact-ceiling (+ (* (c i) .5) (* (- (b i) (c i)) .3) (* (- (a i) (b i)) .1))))
+(check-expect (marginal-tax 100000) 21000)
+
+;; pet-deduction : given num pets, compute deduction
+(: pet-deduction (Integer -> Integer))
+(define (pet-deduction n)
+  (cond
+    [(< n 3) 0]
+    [(>= n 10) 15000]
+    [else (* n 1000)]))
+(check-expect (pet-deduction 3) 3000)
+
+;; hybrid-deduction: given a Boolean indicating whether the family unit
+;; has a hybrid car or not, the family's income, and the number of
+;; people in the family unit, compute the hybrid car deduction.
+(: hybrid-deduction (Boolean Integer Integer -> Integer))
+(define (hybrid-deduction hc i p)
+  (cond
+    [hc (exact-ceiling (* (* p .02) i))]
+    [else 0]))
+(check-expect (hybrid-deduction #t 100000 4) 8000)
+
+;; itemized: compute the tax on a family unit choosing to itemize,
+;; given income, num people, num pets, hybrid car (t/f)
+(: itemized (Integer Integer Integer Boolean -> Integer))
+(define (itemized i p pt hc)
+  (marginal-tax (- i (+ (hybrid-deduction hc i p) (pet-deduction pt)))))
+(check-expect (itemized 120000 3 4 #t) 25400)
+
+;; standard: return the tax on a family unit choosing to take the 
+;; standard deduction, given income and number of people
+(: standard (Integer Integer -> Integer))
+(define (standard i p)
+  (marginal-tax (- i (* p 4000))))
+(check-expect (standard 120000 3) 25000)
+
+;; should-itemize?: return whether a family unit would pay lower taxes
+;; if itemized, given income, num people, num pets, hybrid car (t/f)
+(: should-itemize? (Integer Integer Integer Boolean -> Boolean))
+(define (should-itemize? i p pt hc)
+  (< (itemized i p pt hc) (standard i p)))
+(check-expect (should-itemize? 120000 3 4 #t) #f)
+
+;; tax-return: Determine the negative (refund) or positive (payment) due
+;; a family unit, given their income, num people, num pets, hybrid
+;; status (t/f), amount withheld
+(: tax-return (Integer Integer Integer Boolean Integer -> Integer))
+(define (tax-return i p pt hc w)
+  (cond
+    [(should-itemize? i p pt hc) (- (itemized i p pt hc) w)]
+    [else (- (standard i p) w)]))
+(check-expect (tax-return 120000 3 4 #t 24000) 1000)
+
+(test)

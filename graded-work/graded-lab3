@@ -1,0 +1,36 @@
+;; Lab 3 guideline
+
+;; === correctness ===
+
+draw
+- all three balls are drawn in the correct positions     6 / 6 
+- all three balls are drawn with correct radius and color 6 / 6 
+- three heights are displayed 0 / 6 
+- time elapsed is displayed  0 / 6 
+
+tick-ball
+- balls bounce properly 6 / 6 
+
+tick
+- tick-ball is applied to all balls 6 / 6 
+
+run-simulation
+- simulation runs correctly with given inputs 6 /6  
+
+;; === style ===
+
+;; code layout                       8 / 8 
+;; identifiers are well named        8 / 8
+;; program decomposition (helpers)   8 / 8
+
+;; contracts (type ascriptions)      8 / 8
+;; well-written purposes             6 / 6 
+;; adequate tests                    4 / 8 
+;; minimal tests
+;; clarity (clear logic)             8 / 8
+
+;; svn used correctly                4 / 4
+
+;; _total-score_                   84/ 100
+
+;; graded by Matthew Wachs

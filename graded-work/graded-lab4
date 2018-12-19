@@ -1,0 +1,45 @@
+;; Lab 4 guideline
+
+;; === correctness ===
+ 
+format-time 3/ 5 ;;grader: do not use substring. It will return substring errors.
+Perhaps using local and defining three numbers: minute digit as (exact-floor (/ millis 1000 60)), second digit as (remainder (quotient millis 1000) 60), and ms as (remainder millis 1000) and then padding as appropriate would be a better approach.
+
+strictly-ascending-times? / 5
+
+find-finish / 5
+
+from-grade / 5
+
+from-school / 5
+
+top-n / 5
+
+top-n-from-school / 5
+
+top-n-from-grade / 5
+
+mean-time 4/ 5 ;;grader: you want (exact-floor (round (/ (total-time race) (length race)))) instead so you don't have a rounding error
+
+rank-race / 6
+
+team-score / 6
+
+;; === style ===
+
+;; code layout                        / 6
+;; identifiers are well named         / 6
+;; program decomposition (helpers)    / 6
+
+;; contracts (type ascriptions)       / 6
+;; well-written purposes              / 6
+;; adequate tests                     / 6
+
+;; clarity (clear logic)              / 6
+
+;; svn used correctly                 / 1
+
+;; _total-score_                    97/ 100
+
+;; graded by Wendy
+Great Job!

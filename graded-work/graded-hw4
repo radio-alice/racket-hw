@@ -1,0 +1,44 @@
+;; Homework 4 guideline
+
+;; === correctness ===
+
+;; format         3 / 3
+;; days-in-month  3 / 3
+;; valid?         2 / 4 - check that month is valid also (between 1 and 12) and day is not less than 1
+
+;; before?        4 / 4
+;; after?         4 / 4
+
+;; last-of-month? 3 / 3
+
+;; tomorrow       3 / 3
+;; yesterday      3 / 3
+;; add-days       3 / 3
+
+;; whole-month    3 / 3
+;; dow            6 / 6
+
+;; weekends       3 / 3
+;; memorial-day   3 / 3
+;; labor-day      3 / 3
+;; thanksgiving   3 / 3
+
+;; calendar       7 / 8 - specify a background color if you're going to use white text to avoid white on white
+
+;; === style ===
+
+;; code layout                       6 / 6
+;; identifiers are well named        4 / 4
+;; program decomposition (helpers)   6 / 6
+
+;; contracts (type ascriptions)      6 / 6
+;; well-written purposes             6 / 6
+;; adequate tests                    6 / 6
+
+;; clarity (clear logic)             6 / 6
+
+;; svn used correctly                1 / 1
+
+;; _total-score_                  97 / 100
+
+;; graded by Claire Dolin

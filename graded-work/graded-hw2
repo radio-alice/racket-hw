@@ -1,0 +1,48 @@
+;; Homework 2 guideline
+
+;; === correctness ===
+
+;; - assign-plane                    5/ 6
+;;     uses ordering of conditional
+;;     clauses to avoid specifying
+;;     both upper and lower bound?
+;;     prepends "Recommendation: " <<<
+;;     in one place rather than
+;;     having many copies?
+
+;; - miles-earned                    6/ 6
+
+;; - passengers                      6/ 6
+;; - combine-flights                 6/ 6
+;; - can-fit?                        6/ 6
+;; - max-premium?                    6/ 6
+;; - upgrade                         9/ 9
+;;      works off of total
+;;      number of
+;;      passengers to
+;;      simplify
+;;      calculation?
+;; NO: but clever approach nonetheless
+;; - seats->letters                  6/ 6
+;;      helper function for error
+;;      checking?  NO               -1
+
+
+;; === style ===
+
+;; code layout                       8/ 8
+;; identifiers are well named        4/ 6
+;; one-letter IDs in upgrade confusing
+;; program decomposition (helpers)   3/ 4
+
+;; contracts (type ascriptions)      8/ 8
+;; well-written purposes             6/ 6
+;; adequate tests                    6/ 6
+
+;; clarity (clear logic)             6/ 6
+
+;; svn used correctly                5/ 5
+
+;; _total-score_                   96/ 100
+
+;; graded by Matthew Wachs

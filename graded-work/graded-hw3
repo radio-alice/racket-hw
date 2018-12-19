@@ -1,0 +1,66 @@
+;; Homework 3 guideline
+;; Student: zachsherman
+
+;; === correctness ===
+
+;; - annual-income                    1/ 3
+;; - hourly-rate                      3/ 3
+;; - job=?                            3/ 3
+;; - earnings>?                       4/ 4
+
+;; - points                           2/ 2
+;; - piece->char                      3/ 3
+;; - char->piece                      3/ 3
+
+;; - mirror                           3/ 3
+;; - int-tree->string-tree            3/ 3
+;; - right-edge                       3/ 3
+
+;; - num-nodes                        2/ 2
+;; - sum-nodes                        2/ 2
+;; - height                           3/ 3
+;; - contains?                        3/ 3
+;; - leftmost                         4/ 4
+;; - farthest-item                    5/ 5
+;; - double                           2/ 2
+
+
+;; === style ===
+
+;; code layout                        6/ 8
+;; identifiers are well named         6/ 6
+;; program decomposition (helpers)    4/ 4
+
+;; contracts (type ascriptions)       8/ 8
+;; well-written purposes              6/ 6
+;; adequate tests                     6/ 6
+
+;; clarity (clear logic)              6/ 6
+
+;; svn used correctly                 5/ 5
+
+;; _total-score_                    96/ 100
+
+;; graded by Natalia Kisanga
+
+;; -------------- Grader Comments --------------
+
+Remember to keep your lines uner 80 char (-2 points)
+
+annual-income for wage is incorrect. The following test fails:
+(check-expect (annual-income (Wage 10 50) 60) 25000)
+
+Your wage match statement should look like this:
+
+    [(Wage h m)
+     (cond
+       [(< hw m) (* hw h 50)]
+       [else (* m h 50)])]
+
+(-2 points)
+
+Incorrect annual income causes these earnings>? tests to fail:
+
+(check-expect (earnings>? (Salary 2000 10 35) (Wage 10 39)) #t)
+(check-expect (earnings>? (Wage 10 39) (Salary 2000 10 35)) #f)
+

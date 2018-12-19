@@ -1,0 +1,33 @@
+;; === correctness ===
+
+marginal-tax     8/ 8
+
+pet-deduction    6/ 6
+hybrid-deduction 6/ 6
+
+itemized         6/ 6
+standard         6/ 6
+
+should-itemize?  6/ 6
+
+tax-return       6/ 6
+
+;; === style ===
+
+;; code layout                       6/ 6
+;; identifiers are well named        3/ 6
+;; single-char params are too short
+;; program decomposition (helpers)   6/ 6
+
+;; contracts (type ascriptions)      6/ 6
+;; well-written purposes             8/ 8
+;; adequate tests                    6/12
+;; one test per function is inadequate
+
+;; clarity (clear logic)             8/ 8
+
+;; svn used correctly                4/ 4
+
+;; _total-score_                  91/ 100
+
+;; graded by Matthew Wachs

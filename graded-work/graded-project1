@@ -1,0 +1,43 @@
+=== correctness ===
+
+;; logical->physical  6 / 6
+;; physical->logical  6 / 6
+
+;; logical->string    2 / 2
+
+;; board-ref          2 / 2
+
+;; put-stone-at       6 / 6
+
+;; valid-board-spec?  2 / 2
+
+;; play
+;; - drawing board correctly             9 / 9
+;; - labeling axes correctly             4 / 6
+;; - displaying status message           4 / 4
+;; - handling correct moves correctly    6 / 6
+;; - handling incorrect moves gracefully 6 / 6
+;; - handling passing correctly          5 / 5
+
+;; === style ===
+
+;; code layout                       4 / 6
+;; identifiers are well named        6 / 6
+;; program decomposition (helpers)   6 / 6
+
+;; contracts (type ascriptions)      5 / 5
+;; well-written purposes             5 / 5
+;; adequate tests                    5 / 5
+
+;; clarity (clear logic)             6 / 6
+
+;; svn used correctly                1 / 1
+
+;; _total-score_                  96 / 100
+
+;; Graded by Gwendolyn Gilbert-Snyder
+
+Great job!
+The only issue is that you label your x-axis in the wrong direction--A
+should be on the left, not the right. Also, keep your lines of code to 80 
+characters--much longer than that makes it more difficult to read!
